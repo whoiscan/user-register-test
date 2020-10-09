@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{cabinet}">
+<th:block layout:fragment="styles">
+    <!-- Dashboard styles-->
+</th:block>
+
+<div layout:fragment="main">
+    <div class="col-md-9 offset-3 mt text-left">
+        <p class="font-weight-bold">Name: <span class="font-weight-normal" th:text="${user.username}"></span></p>
+        <p class="font-weight-bold">Full name: <span class="font-weight-normal" th:text="${user.fullName}"></span></p>
+        <p class="font-weight-bold">Email: <span class="font-weight-normal" th:text="${user.email}"></span></p>
+    </div>
+</div>
+<th:block layout:fragment="scripts">
+    <!--my scripts-->
+</th:block>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>App | Sign in</title>
+    <link rel="stylesheet" th:href="@{/assets/css/bootstrap.css}">
+</head>
+<body>
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-md-6 offset-3 text-center">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center text-uppercase">Account login!</h3>
+                </div>
+                <div class="card-body">
+                    <form th:action="@{/auth/sign/in}" method="post" class="form-group">
+                        <label for="username"  class="font-weight-bold">Username</label>
+                        <input class="form-control" type="text" id="username" name="username" placeholder="Username">
+                        <label for="password"  class="font-weight-bold mt-3">Password</label>
+                        <input class="form-control" type="password" id="password" name="password" placeholder="Password">
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-success mt-4 mr-5" style="width: 100px" value="Sign in">
+                        </div>
+                    </form>
+                    <div class="col-md-12">
+                        <div class="pad-all">
+                            <!--<a href="pages-password-reminder.html" class="btn-link mar-rgt">Forgot password ?</a>-->
+                            <a href="/auth/sign/up" class="btn-link mar-lft">Create a new account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<script src="/static/assets/js/jQuery.min.js" th:href="@{/assets/js/jQuery.min.js}"></script>-->
+<!--<script src="/static/assets/js/src/popover.js" th:href="@{/assets/js/src/popover.js}"></script>-->
+<script th:href="@{/assets/js/bootstrap.js}"></script>
+<!--src="/static/assets/js/bootstrap.js"-->
+<!--<script src="/static/assets/plugins/toaster/dist/jquery.toast.min.js"-->
+        <!--th:href="@{/assets/plugins/toaster/dist/jquery.toast.min.js}"></script>-->
+</body>
+</html>

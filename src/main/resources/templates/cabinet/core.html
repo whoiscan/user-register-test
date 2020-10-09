@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:th="http://www.thymeleaf.org"
+       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>cabinet</title>
+    <link rel="stylesheet" th:href="@{/assets/css/bootstrap.css}"/>
+
+</head>
+<body>
+<div class="container">
+    <h1 style="text-align: center"> Cabinet Page</h1>
+    <h1 class="text-center" th:text="${user.username}"></h1>
+    <div class="row">
+        <div class="col-md-6">
+            <a th:href="@{/cabinet/about}" class="btn btn-danger" id="about">About</a>
+            <button class="btn btn-success" id="list">User List</button>
+        </div>
+        <div class="col-md-6">
+            <div class="content" layout:fragment="page_content">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2 offset-7">
+            <a href="/logout" class="btn btn-danger btn-block">Logout</a>
+        </div>
+    </div>
+</div>
+
+<script th:href="@{/assets/js/jQuery.min.js}"></script>
+<script  th:href="@{/assets/js/src/popover.js}"></script>
+<script th:href="@{/assets/js/bootstrap.js}"></script>
+<script th:href="@{/assets/js/main.js}"></script>
+</body>
+</html>
